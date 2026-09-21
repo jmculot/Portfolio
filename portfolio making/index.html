@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nova Reyes — Interactive Developer</title>
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grid-field" aria-hidden="true"></div>
+
+<nav class="nav" id="site-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">NR<span class="dot">.</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" data-nav="about">About</a></li>
+      <li><a href="#work" data-nav="work">Projects</a></li>
+      <li><a href="#skills" data-nav="skills">Skills</a></li>
+      <li><a href="#contact" data-nav="contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero" id="top">
+    <p class="tag">status: available for freelance</p>
+    <h1>Nova&nbsp;Reyes</h1>
+    <p class="role">interactive developer / motion &amp; systems<span class="cursor" aria-hidden="true"></span></p>
+    <p class="lede">I build <strong>fast, considered interfaces</strong> for products that live on screens all day — dashboards, tools, and the odd experimental site. Based in Manila, working with teams everywhere.</p>
+    <p class="scroll-cue"><span class="line"></span> scroll</p>
+  </header>
+
+  <section class="about" id="about">
+    <div class="section-head">
+      <h2>About</h2>
+      <span class="count">01</span>
+    </div>
+    <p>Six years in, most of it spent on the line between design and engineering — the part where a good idea either holds up in the browser or it doesn't. I care about interfaces that feel instant and interactions that explain themselves.</p>
+    <p>Currently building tools at a small studio, and taking on select freelance work. Previously shipped products at two early-stage startups you probably haven't heard of, and one you have.</p>
+  </section>
+
+  <section class="work" id="work">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <span class="count">02</span>
+    </div>
+
+    <a class="work-item" href="#">
+      <span class="work-year">2026</span>
+      <span>
+        <span class="work-title">Signal</span>
+        <span class="work-desc">A real-time monitoring dashboard for infrastructure teams. Redesigned the alert model around attention, not noise.</span>
+      </span>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a class="work-item" href="#">
+      <span class="work-year">2025</span>
+      <span>
+        <span class="work-title">Afterglow</span>
+        <span class="work-desc">An audio-reactive visual toy built for a client's album launch. 40k plays in the first week.</span>
+      </span>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a class="work-item" href="#">
+      <span class="work-year">2024</span>
+      <span>
+        <span class="work-title">Ledger</span>
+        <span class="work-desc">Internal finance tooling for a 200-person company. Cut monthly close time from five days to one.</span>
+      </span>
+      <span class="arrow">↗</span>
+    </a>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="section-head">
+      <h2>Skills</h2>
+      <span class="count">03</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Build</h3>
+        <div class="stack">
+          <span>TypeScript</span><span>React</span><span>Node</span><span>WebGL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Design</h3>
+        <div class="stack">
+          <span>Figma</span><span>Motion Design</span><span>Design Systems</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Learning</h3>
+        <div class="stack">
+          <span>Rust</span><span>Shader Programming</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <p class="contact-lead">Working on something that needs a careful build? Let's talk.</p>
+    <div class="contact-links">
+      <a href="mailto:hello@novareyes.dev">hello@novareyes.dev</a>
+      <a href="#">github</a>
+      <a href="#">linkedin</a>
+      <a href="#">reading list</a>
+    </div>
+  </section>
+
+  <footer>nova reyes — manila, ph — updated 2026</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
