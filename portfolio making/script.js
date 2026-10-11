@@ -57,4 +57,73 @@ if ('IntersectionObserver' in window) {
   );
 
   sections.forEach((section) => observer.observe(section));
-} 
+}
+
+
+// ---------- Popup for projects & certificates ----------
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+const modalFig = document.getElementById('modal-fig');
+const modalMeta = document.getElementById('modal-meta');
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-desc');
+const modalLink = document.getElementById('modal-link');
+let lastFocused = null;
+
+function openModal(card) {
+  const img = card.querySelector('.card-img img');
+  const meta = card.querySelector('.card-meta');
+  const title = card.querySelector('.card-title');
+  const desc = card.querySelector('.card-desc');
+
+  lastFocused = card;
+  modalMeta.textContent = meta ? meta.textContent : '';
+  modalTitle.textContent = title ? title.textContent.trim() : '';
+  modalDesc.textContent = desc ? desc.textContent : '';
+
+  // image (hide the box if the image file is missing)
+  modalFig.hidden = false;
+  modalImg.onerror = () => { modalFig.hidden = true; };
+  modalImg.src = img ? img.getAttribute('src') : '';
+  modalImg.alt = img ? img.alt : '';
+
+  // optional real link: <a class="card" data-link="https://...">
+  const link = card.dataset.link;
+  if (link) {
+    modalLink.href = link;
+    modalLink.hidden = false;
+  } else {
+    modalLink.hidden = true;
+  }
+
+  modal.hidden = false;
+  document.body.classList.add('modal-open');
+  modal.querySelector('.modal-close').focus();
+}
+
+function closeModal() {
+  modal.hidden = true;
+  document.body.classList.remove('modal-open');
+  if (lastFocused) lastFocused.focus();
+}
+
+document.querySelectorAll('[data-modal]').forEach((card) => {
+  card.addEventListener('click', (e) => {
+    e.preventDefault();
+    openModal(card);
+  });
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openModal(card);
+    }
+  });
+});
+
+modal.querySelectorAll('[data-close]').forEach((el) => {
+  el.addEventListener('click', closeModal);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !modal.hidden) closeModal();
+});

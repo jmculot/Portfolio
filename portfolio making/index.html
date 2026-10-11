@@ -51,8 +51,10 @@
   </section>
 
   <!-- ==================== PROJECTS ====================
-       To add a project: copy one <a class="card"> block, paste it below,
-       then change the image path, year, title, description and link.
+       To add a project: copy one PROJECT block, paste it below,
+       then change the image path, year, title and description.
+       Optional: add data-link="https://..." to that project's <a class="card"> tag
+       to show an "open project" button inside the popup.
        Put your images in the "images" folder (e.g. images/project1.png).
   ================================================== -->
   <section class="work" id="work">
@@ -64,46 +66,46 @@
     <div class="card-grid">
 
       <!-- PROJECT 1 -->
-      <a class="card" href="#" target="_blank" rel="noopener">
+      <a class="card" href="#" data-modal>
         <figure class="card-img"><img src="images/isaw eats app.png" alt="Signal dashboard screenshot" onerror="this.style.display='none'"></figure>
         <div class="card-body">
           <p class="card-meta">2026</p>
           <h3 class="card-title">Isaw e-ats</h3>
           <p class="card-desc">An interactive android game that makes you guess which food to pick and not to pick.</p>
-          <span class="card-link">view project ↗</span>
+          <span class="card-link">view details</span>
         </div>
       </a>
 
       <!-- PROJECT 2 -->
-      <a class="card" href="#" target="_blank" rel="noopener">
+      <a class="card" href="#" data-modal>
         <figure class="card-img"><img src="images/fergbentables.png" alt="Afterglow screenshot" onerror="this.style.display='none'"></figure>
         <div class="card-body">
           <p class="card-meta">2025</p>
           <h3 class="card-title">Ferbentables</h3>
           <p class="card-desc">A showroom application that is offline which is use for business for monitoring and for making smooth workflow</p>
-          <span class="card-link">view project ↗</span>
+          <span class="card-link">view details</span>
         </div>
       </a>
 
       <!-- PROJECT 3 -->
-      <a class="card" href="#" target="_blank" rel="noopener">
+      <a class="card" href="#" data-modal>
         <figure class="card-img"><img src="images/jojam studios.png" alt="Ledger screenshot" onerror="this.style.display='none'"></figure>
         <div class="card-body">
           <p class="card-meta">2024</p>
           <h3 class="card-title">Jojam Studios</h3>
           <p class="card-desc">A project website that is for reservation function for a business to introuduce easy access monitoring.</p>
-          <span class="card-link">view project ↗</span>
+          <span class="card-link">view details</span>
         </div>
       </a>
 
       <!-- PROJECT 4 -->
-      <a class="card" href="#" target="_blank" rel="noopener">
+      <a class="card" href="#" data-modal>
         <figure class="card-img"><img src="images/sis app.png" alt="Ledger screenshot" onerror="this.style.display='none'"></figure>
         <div class="card-body">
           <p class="card-meta">2024</p>
           <h3 class="card-title">Student information System application</h3>
           <p class="card-desc">A Research project that shows to the user what is the information and details for school.</p>
-          <span class="card-link">view project ↗</span>
+          <span class="card-link">view details</span>
         </div>
       </a>
 
@@ -111,7 +113,7 @@
   </section>
 
   <!-- ================== CERTIFICATIONS ==================
-       To add a certificate: copy one <div class="card"> block, paste it
+       To add a certificate: copy one CERTIFICATE block, paste it
        below, then change the image path, name and issuer/date.
        Put your images in the "images" folder (e.g. images/cert1.png).
   ================================================== -->
@@ -124,7 +126,7 @@
     <div class="card-grid cert-grid">
 
       <!-- CERTIFICATE 1 -->
-      <div class="card">
+      <div class="card" data-modal tabindex="0" role="button">
         <figure class="card-img"><img src="images/ccp cert.png" alt="Certificate 1" onerror="this.style.display='none'"></figure>
         <div class="card-body">
           <p class="card-meta">Issued 2026</p>
@@ -134,7 +136,7 @@
       </div>
 
       <!-- CERTIFICATE 2 -->
-      <div class="card">
+      <div class="card" data-modal tabindex="0" role="button">
         <figure class="card-img"><img src="images/data science cert.png" alt="Certificate 2" onerror="this.style.display='none'"></figure>
         <div class="card-body">
           <p class="card-meta">Issued 2026</p>
@@ -144,7 +146,7 @@
       </div>
 
       <!-- CERTIFICATE 3 -->
-      <div class="card">
+      <div class="card" data-modal tabindex="0" role="button">
         <figure class="card-img"><img src="images/ethical hacker cert.png" alt="Certificate 3" onerror="this.style.display='none'"></figure>
         <div class="card-body">
           <p class="card-meta">Issued 2026</p>
@@ -154,7 +156,7 @@
       </div>
 
       <!-- CERTIFICATE 4 -->
-      <div class="card">
+      <div class="card" data-modal tabindex="0" role="button">
         <figure class="card-img"><img src="images/html and css cert.png" alt="Certificate 4" onerror="this.style.display='none'"></figure>
         <div class="card-body">
           <p class="card-meta">Issued 2024</p>
@@ -205,6 +207,21 @@
 
   <footer>Jermaine Lavetoria — manila, ph — updated 2026</footer>
 
+</div>
+
+<!-- ==================== POPUP (do not edit) ==================== -->
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close aria-label="Close popup">&times;</button>
+    <figure class="modal-img" id="modal-fig"><img id="modal-img" src="" alt=""></figure>
+    <div class="modal-body">
+      <p class="card-meta" id="modal-meta"></p>
+      <h3 class="card-title" id="modal-title"></h3>
+      <p class="card-desc" id="modal-desc"></p>
+      <a class="modal-link" id="modal-link" href="#" target="_blank" rel="noopener" hidden>open project ↗</a>
+    </div>
+  </div>
 </div>
 
 <script src="script.js"></script>
