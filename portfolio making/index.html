@@ -24,6 +24,7 @@
     <ul class="nav-links" id="nav-links">
       <li><a href="#about" data-nav="about">About</a></li>
       <li><a href="#work" data-nav="work">Projects</a></li>
+      <li><a href="#certifications" data-nav="certifications">Certificates</a></li>
       <li><a href="#skills" data-nav="skills">Skills</a></li>
       <li><a href="#contact" data-nav="contact">Contact</a></li>
     </ul>
@@ -49,44 +50,95 @@
     <p>Currently building tools at a small studio, and taking on select freelance work. Previously shipped products at two early-stage startups you probably haven't heard of, and one you have.</p>
   </section>
 
+  <!-- ==================== PROJECTS ====================
+       To add a project: copy one <a class="card"> block, paste it below,
+       then change the image path, year, title, description and link.
+       Put your images in the "images" folder (e.g. images/project1.png).
+  ================================================== -->
   <section class="work" id="work">
     <div class="section-head">
       <h2>Projects</h2>
       <span class="count">02</span>
     </div>
 
-    <a class="work-item" href="#">
-      <span class="work-year">2026</span>
-      <span>
-        <span class="work-title">Signal</span>
-        <span class="work-desc">A real-time monitoring dashboard for infrastructure teams. Redesigned the alert model around attention, not noise.</span>
-      </span>
-      <span class="arrow">↗</span>
-    </a>
+    <div class="card-grid">
 
-    <a class="work-item" href="#">
-      <span class="work-year">2025</span>
-      <span>
-        <span class="work-title">Afterglow</span>
-        <span class="work-desc">An audio-reactive visual toy built for a client's album launch. 40k plays in the first week.</span>
-      </span>
-      <span class="arrow">↗</span>
-    </a>
+      <!-- PROJECT 1 -->
+      <a class="card" href="#" target="_blank" rel="noopener">
+        <figure class="card-img"><img src="images/project1.png" alt="Signal dashboard screenshot" onerror="this.style.display='none'"></figure>
+        <div class="card-body">
+          <p class="card-meta">2026</p>
+          <h3 class="card-title">Signal</h3>
+          <p class="card-desc">A real-time monitoring dashboard for infrastructure teams. Redesigned the alert model around attention, not noise.</p>
+          <span class="card-link">view project ↗</span>
+        </div>
+      </a>
 
-    <a class="work-item" href="#">
-      <span class="work-year">2024</span>
-      <span>
-        <span class="work-title">Ledger</span>
-        <span class="work-desc">Internal finance tooling for a 200-person company. Cut monthly close time from five days to one.</span>
-      </span>
-      <span class="arrow">↗</span>
-    </a>
+      <!-- PROJECT 2 -->
+      <a class="card" href="#" target="_blank" rel="noopener">
+        <figure class="card-img"><img src="images/project2.png" alt="Afterglow screenshot" onerror="this.style.display='none'"></figure>
+        <div class="card-body">
+          <p class="card-meta">2025</p>
+          <h3 class="card-title">Afterglow</h3>
+          <p class="card-desc">An audio-reactive visual toy built for a client's album launch. 40k plays in the first week.</p>
+          <span class="card-link">view project ↗</span>
+        </div>
+      </a>
+
+      <!-- PROJECT 3 -->
+      <a class="card" href="#" target="_blank" rel="noopener">
+        <figure class="card-img"><img src="images/project3.png" alt="Ledger screenshot" onerror="this.style.display='none'"></figure>
+        <div class="card-body">
+          <p class="card-meta">2024</p>
+          <h3 class="card-title">Ledger</h3>
+          <p class="card-desc">Internal finance tooling for a 200-person company. Cut monthly close time from five days to one.</p>
+          <span class="card-link">view project ↗</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ================== CERTIFICATIONS ==================
+       To add a certificate: copy one <div class="card"> block, paste it
+       below, then change the image path, name and issuer/date.
+       Put your images in the "images" folder (e.g. images/cert1.png).
+  ================================================== -->
+  <section class="certs" id="certifications">
+    <div class="section-head">
+      <h2>Certifications</h2>
+      <span class="count">03</span>
+    </div>
+
+    <div class="card-grid cert-grid">
+
+      <!-- CERTIFICATE 1 -->
+      <div class="card">
+        <figure class="card-img"><img src="images/cert1.png" alt="Certificate 1" onerror="this.style.display='none'"></figure>
+        <div class="card-body">
+          <p class="card-meta">Issued 2026</p>
+          <h3 class="card-title">Certificate Name</h3>
+          <p class="card-desc">Issuing organization</p>
+        </div>
+      </div>
+
+      <!-- CERTIFICATE 2 -->
+      <div class="card">
+        <figure class="card-img"><img src="images/cert2.png" alt="Certificate 2" onerror="this.style.display='none'"></figure>
+        <div class="card-body">
+          <p class="card-meta">Issued 2025</p>
+          <h3 class="card-title">Certificate Name</h3>
+          <p class="card-desc">Issuing organization</p>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <section class="skills" id="skills">
     <div class="section-head">
       <h2>Skills</h2>
-      <span class="count">03</span>
+      <span class="count">04</span>
     </div>
     <div class="skills-grid">
   <div class="skill-group">
@@ -127,4 +179,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-z

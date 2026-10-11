@@ -29,7 +29,7 @@ window.addEventListener('scroll', updateNavBackground, { passive: true });
 updateNavBackground();
 
 // ---------- Active section highlighting ----------
-const sections = ['about', 'work', 'skills', 'contact']
+const sections = ['about', 'work', 'certifications', 'skills', 'contact']
   .map((id) => document.getElementById(id))
   .filter(Boolean);
 
